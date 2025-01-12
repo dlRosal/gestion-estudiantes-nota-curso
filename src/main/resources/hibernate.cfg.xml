@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la conexión -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/instituto</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Dialecto de Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Mostrar SQL generado -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Actualización del esquema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Clases anotadas -->
+        <mapping class="com.ejemplo.Estudiante"/>
+        <mapping class="com.ejemplo.Curso"/>
+        <mapping class="com.ejemplo.Nota"/>
+    </session-factory>
+</hibernate-configuration>
